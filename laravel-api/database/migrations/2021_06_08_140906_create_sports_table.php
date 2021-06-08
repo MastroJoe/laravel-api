@@ -17,8 +17,8 @@ class CreateSportsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->string('governing body');
-            $table->tinyInteger('team members');
+            $table->string('governing_body');
+            $table->tinyInteger('team_members');
             $table->string('equipment');
             $table->tinyInteger('olympic')->default(0);
             $table->timestamps();

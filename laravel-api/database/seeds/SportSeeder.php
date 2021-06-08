@@ -15,6 +15,15 @@ class SportSeeder extends Seeder
     {
       for ($i=0; $i < 10; $i++) {
         $sport = new Sport();
+
+        $sport->name = $faker->word();
+        $sport->description = $faker->text();
+        $sport->governing_body = $faker->word();
+        $sport->team_members = $faker->numberBetween(0, 30);
+        $sport->equipment = $faker->text();
+        $sport->olympic = $faker->boolean();
+
+        $sport->save();
       }
     }
 }
