@@ -15,6 +15,12 @@ class CreateSportsTable extends Migration
     {
         Schema::create('sports', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('description');
+            $table->string('governing body');
+            $table->tinyInteger('team members');
+            $table->string('equipment');
+            $table->tinyInteger('olympic')->default(0);
             $table->timestamps();
         });
     }
