@@ -7,9 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Laravel API</title>
 
     <!-- Scripts -->
+    @yield('head')
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -76,5 +77,6 @@
             @yield('content')
         </main>
     </div>
+    @yield('foot-script')
 </body>
 </html>
